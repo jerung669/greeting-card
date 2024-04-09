@@ -2,7 +2,7 @@ html body {
     padding: 0;
     margin: 0;
     height: 100vh;
-    overflow-x: hidden;
+
 }
 
 html {
@@ -84,7 +84,7 @@ h5 {
 }
 
 .bottom {
-    height: 800px;
+    height: 700px;
     width: 100vw;
     background-color: rgb(147, 87, 87);   
     display: flex;
