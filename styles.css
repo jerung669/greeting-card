@@ -1,0 +1,228 @@
+* body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(background.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+  .container_moon {
+    position: relative;
+  }
+
+  .moon {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+  }
+
+  .container_lantern {
+    position: relative;
+  }
+
+  .lantern {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 250px;
+    height: 250px;
+    background: transparent;
+  }
+  
+  h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 45px;
+    text-align: center;
+    color: #f9e24b;
+    text-shadow: 0px 0px 10px #eced84;
+    margin: auto;
+    padding: 50px;
+  }
+
+  .float { 
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+  @keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+  h2 {
+    font-family: 'Patua One', cursive;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow:0px 0px 10px #ffffff;
+    margin-top: -1em;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+  }
+
+  .audio_player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  audio {
+    background: transparent;
+    width: 50%;
+    padding: 20px;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: #ebd294;
+  }
+
+  .hill {
+    z-index: -100;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50%;
+  }
+  
+  .camel {
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    left: 30px;
+    width: 190px;
+    height: auto;
+  }
+
+  .disclaimer {
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+    text-shadow: 0px 0px 10px #ffffff;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: -1.5em;
+    animation-name: animate-pop;
+    animation-duration: 2s;
+  }
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    padding: auto;
+  }
+  
+  .message, .prayer, .invitation {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    top: 10px;
+    background: transparent;
+    
+  }
+  
+  .message_img, .prayer_img, .invitation_img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #eced84;
+    animation-name: animate-pop;
+    animation-duration: 3s;
+  }
+  
+  .message_overlay, .prayer_overlay, .invitation_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-family: 'Aref Ruqaa Ink', serif;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  
+  .message_overlay > *, .prayer_overlay > *, .invitation_overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  
+  .message_overlay:hover, .prayer_overlay:hover, .invitation_overlay:hover {
+    opacity: 1;
+  }
+  
+  .message_overlay:hover > *, .prayer_overlay:hover > *, .invitation_overlay:hover > * {
+    transform: translateY(0);
+  }
+  
+  .message_title, .prayer_title, .invitation_title {
+    font-size: 2em;
+    background: transparent;
+  }
+  
+  .message_description, .prayer_description, .invitation_description {
+    font-size: 1.25em;
+    margin-top: -4em;
+    text-align: center;
+    background: transparent;
+  } 
+
+  @keyframes animate-pop {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    .moon {
+      display: none;
+    }
+
+    .lantern {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .moon {
+      display: none;
+    }
+
+    .lantern {
+      display: none;
+    }
+
+    .camel {
+      z-index: -98;
+    }
+  }

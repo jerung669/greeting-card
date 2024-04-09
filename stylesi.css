@@ -1,0 +1,284 @@
+html body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.parallax {
+    background-image: url("invitationpage/background.png");
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.star1 {
+    position: absolute;
+    top: 10rem;
+    left: 30rem;
+}
+
+.star2 {
+    position: absolute;
+    top: 23rem;
+    right: 12rem;
+}
+
+span {
+    font-size: 4.5rem;
+}
+
+.title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: rgb(16, 92, 36);
+    text-shadow: 0px 0px 15px rgb(247, 247, 85);
+    position: absolute;
+    top: 8rem;
+    right: 20rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.invite_message {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 24px;
+    color: rgb(16, 92, 36);
+    height: 200px;
+    width: 400px;
+    text-align: justify;
+    position: absolute;
+    top: 16rem;
+    right: 15rem;
+}
+
+.tart {
+    position: absolute;
+    top: 29rem;
+    right: 34rem;
+}
+
+h5 {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: rgb(16, 92, 36);
+    position: absolute;
+    top: 28rem;
+    right: 17rem;
+}
+
+.bottom {
+    height: 800px;
+    width: 100vw;
+    background-color: rgb(147, 87, 87);   
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form {
+    background-color: #743332;
+    border-radius: 20px;
+    height: 500px;
+    padding: 20px;
+    width: 600px;
+}
+
+.title2 {
+    color: #eee;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input_container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+  
+.ic2 {
+    margin-top: 30px;
+}
+  
+.input {
+    background-color: #8c5a59;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+  
+.cut {
+    background-color: #743333;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+}
+  
+.cut-short {
+    width: 180px;
+}
+  
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(10px);
+}
+  
+.placeholder {
+    color: #ffffff;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+  
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.8);
+}
+  
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #8c5a59;
+}
+  
+.input:focus ~ .placeholder {
+    color: #ffffff;
+}
+  
+.submit {
+    background-color: #eca66e;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #743332;
+    cursor: pointer;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 25px;
+    font-weight: bold;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+  
+.submit:active {
+    background-color: #fff;
+}
+
+.grass {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    bottom: -56rem;
+}
+
+.house {
+    width: 400px;
+    position: absolute;
+    bottom: -56rem;
+    left: 1rem;
+}
+
+.family {
+    width: 300px;
+    position: absolute;
+    bottom: -54rem;
+    right: 3rem;
+}
+
+@media screen and (max-width: 1080px) {
+    * body {
+        margin: 0;
+        padding: 0;
+        background-image: url(invitationpage/background.png);
+        height: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .bottom {
+        width: 100;
+        height: auto;
+        background-color: transparent; 
+        margin: 30px;
+        }
+    
+    .div_form { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin-top: 2rem;
+    }
+    
+    .form {
+        margin: auto;
+        padding: 14px;
+        width: 100vw;
+        height: auto;
+    }
+
+    .title2 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .parallax, .star1, .star2, .grass, .house, .invite_message, .title, .family, .tart, h5 {
+        display: none;
+    }
+}

@@ -1,0 +1,234 @@
+* body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url(background.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.design1 {
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: -3em;
+    left: -12em;
+    z-index: -999;
+    background: transparent;
+    -webkit-animation: spin 11s linear infinite;
+    -moz-animation:spin 11s linear infinite;
+    animation: spin 11s linear infinite;
+}
+
+.design2 {
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 12em;
+    right: -12em;
+    z-index: -998;
+    background: transparent;
+    -webkit-animation: spin 11s linear infinite;
+    -moz-animation:spin 11s linear infinite;
+    animation: spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+
+@keyframes spin { 
+    100% {-webkit-transform: rotate(360deg);
+    transform:rotate(360deg);}
+}
+
+.prayer_title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 45px;
+    color: #fcff4d;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    text-shadow: 0px 0px 10px #ffe959;
+}
+
+.container_prayerbox {
+    width: 400px;
+    height: 400px;
+    background-color: #62a460;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    border-radius: 10%;
+    box-shadow: 0px 0px 20px #fcff4d;
+    animation-duration: 3s;
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.border {
+    width:340px;
+    height: 340px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 50px #000;
+    background-color: rgb(0, 0, .7);
+    animation-name: animate-pop;
+}
+
+.top_text {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+    color: #ffe959;
+    text-shadow: 0px 0px 10px #fcff4d;
+    text-align: center;
+    margin: 10px;
+    animation-name: animate-pop;
+}
+
+.middle_text {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 19px;
+    color: #ffe959;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    animation-name: animate-pop;
+}
+
+.bottom_text {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+    color: #ffe959;
+    text-shadow: 0px 0px 10px #fcff4d;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+    animation-name: animate-pop;
+}
+
+@keyframes animate-pop {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+
+.container_backbutton {
+    position: relative;
+}
+
+.backbutton {
+    width: 110px;
+    height: auto;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+}
+
+.hidden {
+    font-family: 'Berkshire Swash', cursive;
+    color: #fcff4d;
+    font-size: 25px;
+    position: fixed;
+    bottom: 20px;
+    left: 120px;
+    opacity: 0;
+}
+
+.backbutton:hover {
+    width: 120px;
+    transform: rotate(-15deg);
+}
+
+.backbutton:hover + .hidden {
+    opacity: 1;
+}
+
+@media screen and (max-width:500px) {
+    .design2 {
+        top: 20rem;
+    }
+
+    .container_prayerbox, .border {
+        width: 100%;
+        height: auto;
+    }
+
+    .container_prayerbox {
+        position: relative;
+    }
+
+    .border {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .backbutton {
+        width: 75px;
+        height: auto;
+    }
+
+    .backbutton:hover {
+        width: 85px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    * body {
+        width: 100%;
+        height: 500px;
+        overflow-y: hidden;
+    }
+
+    .design1, .design2 {
+        display: none;
+    }
+
+    .container_prayerbox, .border {
+        width: 100%;
+        height: auto;
+    }
+
+    .container_prayerbox {
+        position: fixed;
+    }
+
+    .border {
+        position: fixed;
+        top: -6em;
+    }
+
+    .backbutton {
+        width: 50px;
+        height: auto;
+    }
+
+    .hidden {
+        font-size: 19px;
+        position: fixed;
+        bottom: 1em;
+        left: 4.5rem;
+        opacity: 0;
+    }
+
+    .backbutton:hover {
+        width: 55px;
+    }
+
+    .backbutton:hover + .hidden {
+        opacity: 1;
+    }
+}
